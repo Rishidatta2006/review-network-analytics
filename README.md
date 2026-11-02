@@ -65,25 +65,25 @@ flowchart LR
 ## End-to-End Workflow
 
 ```mermaid
-sequenceDiagram
-    participant Data as CSV inputs
-    participant M1 as Preprocessing
-    participant M2 as Similarity graph
-    participant M3 as Spectral clustering
-    participant UI as Streamlit dashboard
+flowchart LR
+    Data[CSV inputs]
+    M1[Preprocessing]
+    M2[Similarity graph]
+    M3[Spectral clustering]
+    UI[Streamlit dashboard]
 
-    Data->>M1: Validate reviews, products, and labels
-    M1->>M1: Aggregate 13 features per reviewer
-    M1->>M1: Impute missing values and standardize
-    M1-->>M2: Scaled reviewer feature matrix
-    M2->>M2: Compute pairwise cosine similarities
-    M2->>M2: Select top-15 neighbors and union-symmetrize
-    M2-->>M3: Weighted adjacency matrix
-    M3->>M3: Compute normalized Laplacian and spectral embedding
-    M3->>M3: K-Means sweep for k=2..8
-    M3->>M3: Select by silhouette; evaluate with synthetic labels
-    M3-->>UI: Clusters, metrics, reports, and figures
-    Data-->>UI: Reviews and product catalog
+    Data -->|Validate reviews, products, and labels| M1
+    M1 -->|Aggregate 13 features per reviewer| M1
+    M1 -->|Impute missing values and standardize| M1
+    M1 -->|Scaled reviewer feature matrix| M2
+    M2 -->|Compute pairwise cosine similarities| M2
+    M2 -->|Select top-15 neighbors and union-symmetrize| M2
+    M2 -->|Weighted adjacency matrix| M3
+    M3 -->|Compute normalized Laplacian and spectral embedding| M3
+    M3 -->|K-Means sweep for k=2..8| M3
+    M3 -->|Select by silhouette; evaluate with synthetic labels| M3
+    M3 -->|Cluster results with synthetic labels| UI
+    Data -->|Reviews and product catalog| UI
 ```
 
 ## Quick Start
