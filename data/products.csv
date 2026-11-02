@@ -1,0 +1,101 @@
+product_id,product_category,product_type
+P0001,clothing,track pants
+P0002,home_appliances,mixer grinder
+P0003,clothing,kurta
+P0004,electronics,webcam
+P0005,home_appliances,electric kettle
+P0006,personal_care,sunscreen
+P0007,personal_care,moisturizer
+P0008,home_appliances,induction cooktop
+P0009,accessories,watch strap
+P0010,books,biography
+P0011,electronics,mechanical keyboard
+P0012,home_appliances,vacuum cleaner
+P0013,home_appliances,water purifier
+P0014,clothing,running shorts
+P0015,books,novel
+P0016,accessories,watch strap
+P0017,personal_care,shampoo
+P0018,clothing,denim jeans
+P0019,electronics,smartwatch
+P0020,accessories,phone case
+P0021,accessories,belt
+P0022,personal_care,sunscreen
+P0023,home_appliances,mixer grinder
+P0024,books,history book
+P0025,electronics,wireless earbuds
+P0026,clothing,hoodie
+P0027,books,novel
+P0028,home_appliances,water purifier
+P0029,books,biography
+P0030,books,history book
+P0031,personal_care,perfume
+P0032,electronics,wireless earbuds
+P0033,accessories,phone case
+P0034,personal_care,hair dryer
+P0035,electronics,power bank
+P0036,home_appliances,mixer grinder
+P0037,books,self-help book
+P0038,personal_care,perfume
+P0039,electronics,webcam
+P0040,personal_care,shampoo
+P0041,accessories,belt
+P0042,personal_care,beard trimmer
+P0043,accessories,phone case
+P0044,electronics,wireless earbuds
+P0045,clothing,track pants
+P0046,electronics,webcam
+P0047,accessories,belt
+P0048,accessories,belt
+P0049,clothing,running shorts
+P0050,electronics,power bank
+P0051,books,cookbook
+P0052,accessories,wallet
+P0053,home_appliances,induction cooktop
+P0054,accessories,wallet
+P0055,personal_care,moisturizer
+P0056,books,self-help book
+P0057,home_appliances,vacuum cleaner
+P0058,books,novel
+P0059,home_appliances,iron box
+P0060,accessories,phone case
+P0061,clothing,jacket
+P0062,electronics,webcam
+P0063,personal_care,shampoo
+P0064,clothing,jacket
+P0065,clothing,hoodie
+P0066,electronics,power bank
+P0067,clothing,denim jeans
+P0068,home_appliances,induction cooktop
+P0069,books,comic collection
+P0070,electronics,mechanical keyboard
+P0071,personal_care,face wash
+P0072,books,cookbook
+P0073,clothing,kurta
+P0074,home_appliances,electric kettle
+P0075,home_appliances,induction cooktop
+P0076,clothing,kurta
+P0077,books,history book
+P0078,accessories,phone case
+P0079,accessories,belt
+P0080,clothing,cotton t-shirt
+P0081,personal_care,sunscreen
+P0082,electronics,smartwatch
+P0083,accessories,laptop sleeve
+P0084,electronics,wireless earbuds
+P0085,accessories,belt
+P0086,personal_care,face wash
+P0087,home_appliances,water purifier
+P0088,electronics,wireless earbuds
+P0089,home_appliances,induction cooktop
+P0090,clothing,cotton t-shirt
+P0091,personal_care,hair dryer
+P0092,electronics,power bank
+P0093,clothing,running shorts
+P0094,electronics,mechanical keyboard
+P0095,electronics,USB hub
+P0096,clothing,cotton t-shirt
+P0097,personal_care,moisturizer
+P0098,clothing,cotton t-shirt
+P0099,books,history book
+P0100,electronics,bluetooth speaker

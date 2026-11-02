@@ -1,0 +1,466 @@
+{
+  "config": {
+    "seed": 42,
+    "n_reviewers": 1000,
+    "n_products": 100,
+    "n_pos_campaigns": 8,
+    "n_neg_campaigns": 8,
+    "target_shares": {
+      "normal": 0.6,
+      "positive": 0.15,
+      "negative": 0.15,
+      "ambiguous": 0.1
+    },
+    "min_campaign_size": 8,
+    "output_dir": "data"
+  },
+  "date_range": [
+    "2026-03-01",
+    "2026-08-31"
+  ],
+  "group_counts": {
+    "ambiguous": 96,
+    "negative_manipulation": 138,
+    "normal": 625,
+    "positive_manipulation": 141
+  },
+  "ambiguous_subtype_counts": {
+    "bandwagon": 44,
+    "polarized": 18,
+    "burst": 24,
+    "low_verified": 10
+  },
+  "campaigns": [
+    {
+      "campaign_id": "C_POS_01",
+      "direction": "positive",
+      "n_members": 13,
+      "targets": [
+        "P0016",
+        "P0037",
+        "P0045",
+        "P0061",
+        "P0082",
+        "P0097"
+      ],
+      "windows": [
+        {
+          "start": "2026-07-18",
+          "end": "2026-07-25"
+        }
+      ],
+      "verified_prob": 0.474,
+      "rating_probs": [
+        0.03,
+        0.043,
+        0.105,
+        0.277,
+        0.545
+      ]
+    },
+    {
+      "campaign_id": "C_POS_02",
+      "direction": "positive",
+      "n_members": 14,
+      "targets": [
+        "P0001",
+        "P0006",
+        "P0034",
+        "P0054",
+        "P0057",
+        "P0065"
+      ],
+      "windows": [
+        {
+          "start": "2026-04-07",
+          "end": "2026-04-22"
+        }
+      ],
+      "verified_prob": 0.419,
+      "rating_probs": [
+        0.026,
+        0.039,
+        0.099,
+        0.273,
+        0.562
+      ]
+    },
+    {
+      "campaign_id": "C_POS_03",
+      "direction": "positive",
+      "n_members": 30,
+      "targets": [
+        "P0037",
+        "P0043",
+        "P0088"
+      ],
+      "windows": [
+        {
+          "start": "2026-03-14",
+          "end": "2026-03-23"
+        },
+        {
+          "start": "2026-05-05",
+          "end": "2026-05-10"
+        }
+      ],
+      "verified_prob": 0.38,
+      "rating_probs": [
+        0.028,
+        0.041,
+        0.102,
+        0.275,
+        0.554
+      ]
+    },
+    {
+      "campaign_id": "C_POS_04",
+      "direction": "positive",
+      "n_members": 13,
+      "targets": [
+        "P0018",
+        "P0079",
+        "P0096"
+      ],
+      "windows": [
+        {
+          "start": "2026-05-21",
+          "end": "2026-06-01"
+        }
+      ],
+      "verified_prob": 0.413,
+      "rating_probs": [
+        0.028,
+        0.041,
+        0.102,
+        0.275,
+        0.554
+      ]
+    },
+    {
+      "campaign_id": "C_POS_05",
+      "direction": "positive",
+      "n_members": 20,
+      "targets": [
+        "P0029",
+        "P0037",
+        "P0045",
+        "P0055",
+        "P0091"
+      ],
+      "windows": [
+        {
+          "start": "2026-05-16",
+          "end": "2026-05-28"
+        }
+      ],
+      "verified_prob": 0.489,
+      "rating_probs": [
+        0.017,
+        0.029,
+        0.083,
+        0.26,
+        0.61
+      ]
+    },
+    {
+      "campaign_id": "C_POS_06",
+      "direction": "positive",
+      "n_members": 23,
+      "targets": [
+        "P0002",
+        "P0036",
+        "P0057",
+        "P0061",
+        "P0089",
+        "P0091"
+      ],
+      "windows": [
+        {
+          "start": "2026-05-31",
+          "end": "2026-06-05"
+        }
+      ],
+      "verified_prob": 0.465,
+      "rating_probs": [
+        0.015,
+        0.026,
+        0.078,
+        0.256,
+        0.625
+      ]
+    },
+    {
+      "campaign_id": "C_POS_07",
+      "direction": "positive",
+      "n_members": 17,
+      "targets": [
+        "P0011",
+        "P0023",
+        "P0044",
+        "P0060",
+        "P0088",
+        "P0089"
+      ],
+      "windows": [
+        {
+          "start": "2026-07-08",
+          "end": "2026-07-19"
+        }
+      ],
+      "verified_prob": 0.526,
+      "rating_probs": [
+        0.016,
+        0.027,
+        0.081,
+        0.259,
+        0.617
+      ]
+    },
+    {
+      "campaign_id": "C_POS_08",
+      "direction": "positive",
+      "n_members": 11,
+      "targets": [
+        "P0004",
+        "P0044",
+        "P0050",
+        "P0052",
+        "P0062"
+      ],
+      "windows": [
+        {
+          "start": "2026-04-08",
+          "end": "2026-04-14"
+        },
+        {
+          "start": "2026-05-18",
+          "end": "2026-05-21"
+        }
+      ],
+      "verified_prob": 0.611,
+      "rating_probs": [
+        0.029,
+        0.043,
+        0.105,
+        0.277,
+        0.545
+      ]
+    },
+    {
+      "campaign_id": "C_NEG_01",
+      "direction": "negative",
+      "n_members": 18,
+      "targets": [
+        "P0007",
+        "P0014",
+        "P0019",
+        "P0057",
+        "P0081",
+        "P0092"
+      ],
+      "windows": [
+        {
+          "start": "2026-06-01",
+          "end": "2026-06-10"
+        }
+      ],
+      "verified_prob": 0.618,
+      "rating_probs": [
+        0.37,
+        0.207,
+        0.122,
+        0.149,
+        0.152
+      ]
+    },
+    {
+      "campaign_id": "C_NEG_02",
+      "direction": "negative",
+      "n_members": 10,
+      "targets": [
+        "P0046",
+        "P0070",
+        "P0088",
+        "P0098"
+      ],
+      "windows": [
+        {
+          "start": "2026-05-15",
+          "end": "2026-05-24"
+        },
+        {
+          "start": "2026-06-26",
+          "end": "2026-06-30"
+        }
+      ],
+      "verified_prob": 0.361,
+      "rating_probs": [
+        0.521,
+        0.268,
+        0.104,
+        0.066,
+        0.041
+      ]
+    },
+    {
+      "campaign_id": "C_NEG_03",
+      "direction": "negative",
+      "n_members": 11,
+      "targets": [
+        "P0057",
+        "P0061",
+        "P0094"
+      ],
+      "windows": [
+        {
+          "start": "2026-06-10",
+          "end": "2026-06-17"
+        }
+      ],
+      "verified_prob": 0.373,
+      "rating_probs": [
+        0.414,
+        0.224,
+        0.117,
+        0.125,
+        0.12
+      ]
+    },
+    {
+      "campaign_id": "C_NEG_04",
+      "direction": "negative",
+      "n_members": 15,
+      "targets": [
+        "P0027",
+        "P0042",
+        "P0068"
+      ],
+      "windows": [
+        {
+          "start": "2026-06-25",
+          "end": "2026-07-02"
+        }
+      ],
+      "verified_prob": 0.327,
+      "rating_probs": [
+        0.443,
+        0.236,
+        0.113,
+        0.109,
+        0.099
+      ]
+    },
+    {
+      "campaign_id": "C_NEG_05",
+      "direction": "negative",
+      "n_members": 16,
+      "targets": [
+        "P0006",
+        "P0067",
+        "P0098"
+      ],
+      "windows": [
+        {
+          "start": "2026-05-17",
+          "end": "2026-06-01"
+        }
+      ],
+      "verified_prob": 0.684,
+      "rating_probs": [
+        0.488,
+        0.255,
+        0.108,
+        0.084,
+        0.065
+      ]
+    },
+    {
+      "campaign_id": "C_NEG_06",
+      "direction": "negative",
+      "n_members": 22,
+      "targets": [
+        "P0025",
+        "P0045",
+        "P0054",
+        "P0072",
+        "P0081"
+      ],
+      "windows": [
+        {
+          "start": "2026-06-28",
+          "end": "2026-07-05"
+        },
+        {
+          "start": "2026-08-20",
+          "end": "2026-08-27"
+        }
+      ],
+      "verified_prob": 0.351,
+      "rating_probs": [
+        0.475,
+        0.25,
+        0.109,
+        0.091,
+        0.075
+      ]
+    },
+    {
+      "campaign_id": "C_NEG_07",
+      "direction": "negative",
+      "n_members": 37,
+      "targets": [
+        "P0010",
+        "P0054",
+        "P0072",
+        "P0077",
+        "P0080"
+      ],
+      "windows": [
+        {
+          "start": "2026-05-14",
+          "end": "2026-05-28"
+        },
+        {
+          "start": "2026-06-24",
+          "end": "2026-06-28"
+        }
+      ],
+      "verified_prob": 0.656,
+      "rating_probs": [
+        0.394,
+        0.217,
+        0.119,
+        0.136,
+        0.134
+      ]
+    },
+    {
+      "campaign_id": "C_NEG_08",
+      "direction": "negative",
+      "n_members": 9,
+      "targets": [
+        "P0003",
+        "P0012",
+        "P0043",
+        "P0046",
+        "P0048"
+      ],
+      "windows": [
+        {
+          "start": "2026-05-07",
+          "end": "2026-05-18"
+        }
+      ],
+      "verified_prob": 0.676,
+      "rating_probs": [
+        0.525,
+        0.27,
+        0.103,
+        0.064,
+        0.039
+      ]
+    }
+  ],
+  "note": "Evaluation/documentation only. Not for use as model input."
+}

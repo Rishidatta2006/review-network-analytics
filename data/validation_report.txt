@@ -1,0 +1,106 @@
+==============================================================================
+VALIDATION REPORT
+==============================================================================
+Seed: 42   Date range: 2026-03-01 -> 2026-08-31
+
+-- Record counts --
+reviews: 6173   reviewers (ground truth rows): 1000   reviewers with reviews: 1000
+products defined: 100   products with >=1 review: 100
+reviews per reviewer: mean 6.17, median 6, min 1, max 24
+
+-- Reviewer groups (ground truth) --
+  normal                    625  (62.5%)
+  positive_manipulation     141  (14.1%)
+  negative_manipulation     138  (13.8%)
+  ambiguous                  96  (9.6%)
+  ambiguous subtypes: {'bandwagon': 44, 'polarized': 18, 'burst': 24, 'low_verified': 10}
+
+-- Reviews by reviewer group --
+  ambiguous                  756 reviews  (12.2%)  mean 7.88 per reviewer
+  negative_manipulation     1172 reviews  (19.0%)  mean 8.49 per reviewer
+  normal                    3055 reviews  (49.5%)  mean 4.89 per reviewer
+  positive_manipulation     1190 reviews  (19.3%)  mean 8.44 per reviewer
+
+-- Product category distribution (reviews) --
+  electronics         1265  (20.5%)
+  clothing            1051  (17.0%)
+  accessories          986  (16.0%)
+  home_appliances      971  (15.7%)
+  books                957  (15.5%)
+  personal_care        943  (15.3%)
+
+-- Campaign counts --
+  positive campaigns: 8   negative campaigns: 8
+  campaign   reviewers  reviews  targets target-rev  mean★   %4-5★   %1-2★  %verif
+  C_NEG_01          18       92        6         92   2.50     28%     58%     70%
+  C_NEG_02          10       30        4         30   1.80     10%     83%     30%
+  C_NEG_03          11       32        3         32   2.28     22%     62%     34%
+  C_NEG_04          15       41        3         41   2.02     15%     71%     37%
+  C_NEG_05          16       39        3         39   1.87     13%     82%     64%
+  C_NEG_06          22       93        5         93   2.03     15%     70%     33%
+  C_NEG_07          37      172        5        172   2.12     19%     71%     63%
+  C_NEG_08           9       36        5         36   1.94     17%     75%     61%
+  C_POS_01          13       65        6         65   4.51     89%      2%     52%
+  C_POS_02          14       62        6         62   4.31     81%      6%     40%
+  C_POS_03          30       85        3         85   4.26     79%      5%     51%
+  C_POS_04          13       32        3         32   3.84     72%     16%     56%
+  C_POS_05          20       86        5         86   4.44     87%      3%     43%
+  C_POS_06          23      120        6        120   4.42     88%      5%     45%
+  C_POS_07          17       67        6         67   4.21     81%     13%     54%
+  C_POS_08          11       38        5         38   4.21     79%      8%     71%
+
+-- Missing values --
+  reviews.csv     : campaign_id=5083
+  ground_truth.csv: campaign_id=721
+  (campaign_id is null by design for non-campaign reviews/reviewers; no other column has nulls)
+
+-- Rating distribution (% of reviews) --
+  group                         1★      2★      3★      4★      5★    mean
+  ALL                         9.6%   11.4%   19.4%   26.9%   32.7%    3.62
+  normal                      4.8%   11.0%   22.3%   30.3%   31.6%    3.73
+  positive_manipulation       4.9%    7.2%   16.5%   27.4%   44.0%    3.98
+  negative_manipulation      23.3%   17.0%   16.9%   21.3%   21.5%    3.01
+  ambiguous                  15.1%   11.1%   15.9%   21.4%   36.5%    3.53
+
+-- Behavioural similarity: product-set overlap (mean pairwise Jaccard) --
+  normal-normal (random pairs)          : 0.0399
+  within same positive campaign (mean)  : 0.3018
+  within same negative campaign (mean)  : 0.2904
+  positive vs negative campaigns (cross): 0.0555
+
+-- Timing: spread of campaign reviews around the same target product (std, days) --
+  median std 1.80 days (campaign-product pairs with >2 reviews: 74); whole range = 184 days
+
+-- Single-feature separability (AUC folded to >= 0.5; 0.5 = no signal, 1.0 = perfect) --
+target            coordinated vs rest  negative vs rest  positive vs rest
+feature
+active_span_days                0.621             0.631             0.572
+frac_high                       0.570             0.758             0.637
+frac_low                        0.660             0.834             0.562
+frac_verified                   0.680             0.630             0.671
+mean_rating                     0.589             0.826             0.672
+mean_words                      0.668             0.608             0.672
+n_reviews                       0.745             0.716             0.694
+
+-- Checks --
+  [PASS] 1. every reviewer_id in reviews.csv exists in ground_truth.csv
+  [PASS] 2. exactly one ground-truth row per reviewer (and every reviewer has reviews)  (1000 rows / 1000 unique)
+  [PASS] 3. review_id unique
+  [PASS] 4. ratings are integers in 1..5
+  [PASS] 5. timestamps valid and inside the date range  (2026-03-01 00:58:48 -> 2026-08-31 19:07:29)
+  [PASS] 6. product_id refers to a defined product (and category matches the catalogue)
+  [PASS] 7a. review campaign_ids are defined campaigns
+  [PASS] 7b. campaign reviews belong to reviewers assigned to that same campaign
+  [PASS] 7c. reviewers outside campaigns (normal/ambiguous) have no campaign reviews
+  [PASS] 7d. ground-truth conventions consistent (category <-> direction <-> campaign <-> is_coordinated)
+  [PASS] 7e. every coordinated reviewer has >= 2 campaign reviews
+  [PASS] 8. missing values only in campaign_id (null = not a campaign review/reviewer)
+  [PASS] 9. no duplicate records (full-row and reviewer-product)  (duplicate rows=0, duplicate reviewer-product pairs=0)
+  [PASS] 10. 5-10 positive and 5-10 negative campaigns, each with multiple reviewers and reviews  (8 positive, 8 negative)
+  [PASS] X1. dataset size within target (5,000-8,000 reviews; ~1,000 reviewers; ~100 products)  (6173 reviews)
+  [PASS] X2. normal reviewers give both 1-star and 5-star reviews and a mix of ratings  (1-star 4.8%, 5-star 31.6%)
+  [PASS] X3. coordinated high-rating and low-rating behaviour both present  (positive campaigns: 83.4% 4-5 star; negative: 69.7% 1-2 star)
+  [PASS] X4. no identical review text inside any campaign
+  [PASS] X5. no single aggregate feature separates groups (max single-feature AUC < 0.95)  (max single-feature AUC = 0.834)
+
+ALL CHECKS PASSED
